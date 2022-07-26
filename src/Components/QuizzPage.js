@@ -11,7 +11,23 @@ export default function QuizzPage(props) {
   const [quizzItems, setQuizzItems] = React.useState(null);
   const [selectedAnswers, setSelectedAnswers] = React.useState({});
   const [isVerifyMode, setIsVerifyMode] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
   
+
+  React.useEffect(()=>{
+    handleResize()
+  },[])
+
+  function handleResize(){
+    if(window.innerWidth >= 735){
+      setIsMobile(false)
+    } else {
+      setIsMobile(true)
+    }
+  }
+
+
+  window.addEventListener("resize", handleResize);
 
   React.useEffect(() => {
     console.log('click', selectedAnswers);
@@ -120,6 +136,7 @@ export default function QuizzPage(props) {
       )}
       {isInGame && (
         <RenderedQuestions
+          isMobile={isMobile}
           isInGame={isInGame}
           verifyAnswers={verifyAnswers}
           verifyMode={isVerifyMode}

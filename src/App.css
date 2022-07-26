@@ -190,9 +190,12 @@ body {
 }
 .answers {
   margin:0 auto;
-  display:grid;
+  /*display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr;*/
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   row-gap: 10px;
   width: 70vw;
 
@@ -324,6 +327,154 @@ body {
   -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
   animation: load6 1.7s infinite ease, round 1.7s infinite ease;
 }
+
+
+
+/*=========================================================================================*/
+
+.Mobile .answers {
+  margin:0 auto;
+  /*display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;*/
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  width: 70vw;
+
+}
+.Mobile .answer {
+  text-align: center;
+  background-color:white;
+  border-radius:40px;
+  margin: 0 auto;
+  padding:4px 10px;
+  min-width: 150px;
+  min-height:10px;
+  border:1px solid #4D5B9E;
+  display:flex;
+  align-items: center;
+  cursor:pointer;
+  justify-content: center;
+}
+
+.Mobile .answer:hover{
+  background-color:whitesmoke;
+
+}
+
+.Mobile .selected:hover{
+  background-color:#D6DBF5;
+
+}
+
+
+.Mobile .selected {
+  background-color:#D6DBF5;
+  border:solid 2px #4D5B9E;
+  
+}
+
+.Mobile .backToMainMenuButton {
+  min-height:30px;
+  padding:0 5px;
+  border:none;
+  cursor: pointer;
+  font-size:14px;
+  font-weight: 900;
+  border-radius:40px;
+  background-color:#293264;
+  color:white;
+  align-self:flex-start;
+  margin:4px 0 0px 4px
+}
+
+.Mobile .backToMainMenuButton:hover {
+  background-color: #6474c0;
+}
+
+.Mobile .QuizzPage--title {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.Mobile .submitButton {
+  margin:15px 0;
+  padding:10px 10px;
+  border:none;
+  cursor: pointer;
+  font-size:24px;
+  font-weight: 700;
+  border-radius:40px;
+  background-color:#293264;
+  color:white;
+  margin-bottom:30px;
+}
+
+.Mobile .disabledSubmitButton{
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+  opacity: 40%;
+}
+
+.Mobile .submitButton:hover {
+  background-color:rgb(106, 107, 209);
+  color:white;
+}
+
+
+.Mobile .correct{
+  background-color:greenyellow;
+  border:solid 2px #00c120;
+
+}
+
+.Mobile .incorrect{
+  background-color:rgb(255, 69, 69);
+  color:white;
+  opacity:30%;
+}
+
+.Mobile .itWasThisOne{
+  background-color: greenyellow;
+  border:solid 2px #4D5B9E;
+
+}
+
+.Mobile .transparent{
+  opacity:50%;
+}
+
+.Mobile .disabled {
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+
+.Mobile .loader {
+  color: #6474c0;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+/*=========================================================================================*/
+
+
 @-webkit-keyframes load6 {
   0% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;

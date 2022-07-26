@@ -3,14 +3,14 @@ import { decode } from '../utils';
 import clsx from 'clsx';
 
 export default function RenderedQuestions(props) {
-	const { verifyMode, quizzItems } = props;
+	const { verifyMode, quizzItems, isMobile } = props;
 
 
 
   const quizzItemsElements = quizzItems.map((quizzItem, quizzItemIndex) => {
 		const quizzItemID = quizzItem.id;
     return (
-      <div key={`question::${quizzItemID}`} className="quizzItem">
+      <div key={`question::${quizzItemID}`} className={clsx({"quizzItem":true, "Mobile":isMobile})}>
         <p className="question">{decode(quizzItem.question)}</p>
         <div className="answers">
           {quizzItems[quizzItemIndex].allAnswers.map(
